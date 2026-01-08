@@ -38,13 +38,15 @@ Os dados foram carregados a partir de arquivos CSV utilizando o comando `LOAD CS
 ### Usuários
 
 
-```cypher
+```
+cypher
 LOAD CSV WITH HEADERS FROM 'file:///users.csv' AS row
 CREATE (:User {
   id: toInteger(row.id),
   name: row.name
 });
 
+```
 
 ```cypher
 LOAD CSV WITH HEADERS FROM 'file:///relationships.csv' AS row
