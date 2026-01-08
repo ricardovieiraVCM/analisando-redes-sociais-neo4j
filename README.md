@@ -36,6 +36,8 @@ Modelar e analisar uma rede social simulada, permitindo identificar conexões en
 Os dados foram carregados a partir de arquivos CSV utilizando o comando `LOAD CSV`.
 
 ### Usuários
+
+
 ```cypher
 LOAD CSV WITH HEADERS FROM 'file:///users.csv' AS row
 CREATE (:User {
