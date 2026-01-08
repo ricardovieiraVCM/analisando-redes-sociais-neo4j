@@ -42,6 +42,7 @@ CREATE (:User {
   id: toInteger(row.id),
   name: row.name
 });
+
 LOAD CSV WITH HEADERS FROM 'file:///relationships.csv' AS row
 MATCH (a:User {id: toInteger(row.from)}),
       (b:User {id: toInteger(row.to)})
