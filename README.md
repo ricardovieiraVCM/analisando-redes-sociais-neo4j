@@ -71,3 +71,15 @@ MATCH p=shortestPath(
 )
 RETURN p;
 ```
+
+id,name
+1,Alice
+2,Bob
+3,Carol
+4,Daniel
+
+from,to
+1,2
+2,3
+3,4
+1,3
