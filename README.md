@@ -50,6 +50,7 @@ MATCH (a:User {id: toInteger(row.from)}),
       (b:User {id: toInteger(row.to)})
 CREATE (a)-[:FOLLOWS]->(b);
 
+
 ```
 // Total de usuários
 MATCH (u:User)
