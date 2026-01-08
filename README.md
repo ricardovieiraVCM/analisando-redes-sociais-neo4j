@@ -43,10 +43,14 @@ CREATE (:User {
   name: row.name
 });
 
+
+```cypher
 LOAD CSV WITH HEADERS FROM 'file:///relationships.csv' AS row
 MATCH (a:User {id: toInteger(row.from)}),
       (b:User {id: toInteger(row.to)})
 CREATE (a)-[:FOLLOWS]->(b);
+
+```
 // Total de usuários
 MATCH (u:User)
 RETURN count(u);
@@ -61,3 +65,4 @@ MATCH p=shortestPath(
   (a:User {name: 'Alice'})-[:FOLLOWS*]-(b:User {name: 'Bob'})
 )
 RETURN p;
+```
